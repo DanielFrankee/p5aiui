@@ -8,16 +8,13 @@ function setup(){
 }
 
 
-function mouseReleased(){
-  if (keyIsPressed == true){
-    if (keyIsDown(SHIFT)){
-    } else {
-      drawing_array.push(drawing);
-      drawing = [];
-    }
-  } else {
+// insted of pressing "shift" why not just pressing "c" for closing the current shape
+// makes it alot easier
+function keyPressed() {
+  if (key == "c") {
     drawing_array.push(drawing);
     drawing = [];
+    console.log(drawing_array.length);
   }
 }
 
